@@ -1,0 +1,17 @@
+#仓库初始化
+git init
+#添加文件
+git add filename
+#提交文件
+git commit filename -m "commit message"
+#查看当前仓库的状态
+git status
+#查看修改内容
+git diff
+#查看更新日志
+git log
+#回退上一个版本(^的个数是)
+git reset --hard HEAD^gt
+git reset --hard commitId
+#查看命令历史
+git reflog

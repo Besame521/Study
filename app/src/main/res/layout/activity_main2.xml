@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".constraintlayout.MainActivity">
+    <!--app:layout_constraintLeft_toLeftOf=""
+        当前控件的左侧与某一控件的左侧对齐
+        app:layout_constraintLeft_toRightOf=""
+        当前控件的左侧与某一控件的右侧对齐
+        app:layout_constraintRight_toLeftOf=""
+        当前控件的右侧与某一控件的左侧对齐
+        app:layout_constraintRight_toRightOf=""
+        当前控件的右侧与某一控件的右侧对齐
+        app:layout_constraintTop_toTopOf=""
+        当前控件的顶部与某一控件的顶部对齐
+        app:layout_constraintTop_toBottomOf=""
+        当前控件的顶部与某一控件的底部对齐
+        app:layout_constraintBottom_toTopOf=""
+        当前控件的底部与某一控件的顶部对齐
+        app:layout_constraintBottom_toBottomOf=""
+        当前控件的底部与某一控件的底部对齐
+        app:layout_constraintBaseline_toBaselineOf=""
+        当前控件的基线与某一控件的基线对齐
+        app:layout_constraintDimensionRatio="16:6"
+        当前控件的宽高比
+        app:layout_constraintHorizontal_weight
+        当前控件所占比例
+        app:layout_constraintHorizontal_weight
+        app:layout_constraintVertical_weight
+
+        控件之间设置相互依赖之后，就组成了一个链，可以在链头设置
+        layout_constraintHorizontal_chainStyle 来控制分布的样式
+        有三种模式：
+        1、spread
+        2、spread_inside
+        3、packed
+
+        //设置控件两侧的拉力
+        layout_constraintHorizontal_bias
+        layout_constraintVertical_bias
+
+        //设置辅助线，通过辅助线我们可以确定组件的位置
+        android.support.constraint.Guideline
+            android:orientation=""来设置辅助线的方向
+            android:layout_constraintGuide_begin=""设置辅助线的起始位置
+            android:layout_constraintGuide_end=""设置辅助线的结束位置
+            android:layout_constraintGuide_percent
+    -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_1"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_2"/>
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_1"
+        app:layout_constraintRight_toLeftOf="@id/tv_3"/>
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_2"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
